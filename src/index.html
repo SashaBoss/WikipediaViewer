@@ -3,17 +3,26 @@
 <head>
     <title>Wikipedia Viewer</title>
     <meta charset="utf-8" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.3.0/css/foundation.css" rel="stylesheet" />
     <link href="css/style.css" rel="stylesheet" />
 </head>
-<body>
-    <div class="container">
-        <button class="button random-article" onclick="mgr.showRandomArticle()">Random Article</button>
-        <input type="text" />
-        <button class="button search">Search</button>
+<body ng-app="WikipediaViewer">
+    <div class="wiki-viewer-container" ng-controller="WikipediaViewerController">
+        <div class="row">
+            <a class="button" ng-click="showRandomArticle()">Random Article</a>
+            <input ng-model="searchString" type="text" />
+            <a class="button" ng-click="search()">Search</a>
+        </div>
+        <div class="row search-results">
+            <ul class="search-articles">
+                <li ng-repeat="article in searchResults">
+                    <a href=""></a>
+                </li>
+            </ul>
+        </div>
     </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.js"></script>
-<script src="js/main.js"></script>
-    <ul class="results">
-    </ul>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-wikipedia-api-factory/dist/angular-wikipedia-api-factory.js"></script>
+    <script src="js/app.js"></script>
 </body>
 </html>
