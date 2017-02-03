@@ -1,5 +1,15 @@
-.articles .article .article-logo {
+.wiki-viewer-container {
+  margin-left: 500px; }
+
+.wiki-form .wiki-query {
+  width: 240px; }
+.wiki-form .button {
   width: 120px;
-  height: 120px; }
+  padding: 5px;
+  text-transform: uppercase; }
+
+.articles .article-element .article-logo {
+  width: 70px;
+  height: 70px; }
 
 /*# sourceMappingURL=style.css.map */

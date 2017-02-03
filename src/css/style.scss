@@ -1,16 +1,30 @@
-body
-{
+body {
+}
+
+.wiki-viewer-container {
+    margin-left: 500px;
+}
+
+.wiki-form {
+    .wiki-query {
+        width: 240px;
+    }
+
+    .button {
+        width: 120px;
+        padding: 5px;
+        text-transform: uppercase;
+    }
 }
 
 .articles {
-    .article {
+    .article-element {
         .article-logo {
-            width: 120px;
-            height: 120px;
+            width: 70px;
+            height: 70px;
         }
 
         .article-url {
-
         }
     }
 }

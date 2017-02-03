@@ -8,14 +8,14 @@
 </head>
 <body ng-app="WikipediaViewer">
     <div class="wiki-viewer-container" ng-controller="WikipediaViewerController">
-        <div class="row">
-            <a class="button" ng-click="showRandomArticle()">Random Article</a>
-            <input ng-model="searchString" type="text" />
+        <div class="row wiki-form">
+            <input ng-model="searchString" type="text" class="wiki-query"/>
             <a class="button" ng-click="search()">Search</a>
+            <a class="button" ng-click="showRandomArticle()">Random</a>
         </div>
         <div class="row search-results">
             <ul class="articles">
-                <li ng-repeat="article in searchResults">
+                <li ng-repeat="article in searchResults" class="article-element">
                     <img ng-src="{{article.thumbnail}}" alt="No Thumbnail" class="article-logo"/>
                     <a href="" target="_blank" ng-href="{{article.page}}" class="article-url">{{article.title}}</a>
                 </li>
@@ -26,6 +26,5 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular-route.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular-resource.js"></script>
     <script src="js/app.js"></script>
-    <script src="js/alg.js"></script>
 </body>
 </html>
